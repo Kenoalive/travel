@@ -16,53 +16,12 @@
 <script>
 export default{
 	name:'HomeIcons',
+	props:{
+		iconList:Array
+	},
 	data () {
 		return{
-			iconList:[{
-				id:'001',
-				imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-				desc:'热门景点热门景点热门景点'
-			},
-			{
-				id:'002',
-				imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png',
-				desc:'自然风光'
-			},
-			{
-				id:'003',
-				imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-				desc:'热门景点'
-			},
-			{
-				id:'004',
-				imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png',
-				desc:'自然风光'
-			},
-			{
-				id:'005',
-				imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-				desc:'热门景点'
-			},
-			{
-				id:'006',
-				imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png',
-				desc:'自然风光'
-			},
-			{
-				id:'007',
-				imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-				desc:'热门景点'
-			},
-			{
-				id:'008',
-				imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png',
-				desc:'自然风光'
-			},
-			{
-				id:'009',
-				imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-				desc:'热门景点'
-			}]
+			
 		}
 	},
 	computed : {
