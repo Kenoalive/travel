@@ -3,6 +3,7 @@
 		<home-header :city="city"></home-header>
 		<home-swiper :list="swiperList"></home-swiper>
 		<home-icons :iconList="iconList"></home-icons>
+		<home-recommend :recommendList="recommendList"></home-recommend>
 	</div>
 </template>
 <script>
@@ -11,19 +12,22 @@
 	import HomeSwiper from './components/Swiper.vue'
 	import HomeIcons from './components/icons.vue'
 	import axios from 'axios'
+	import HomeRecommend from './components/Recommend.vue'
 
 	export default{
 		name:'home',
 		components:{
 		 	HomeHeader:HomeHeader,
 			HomeSwiper:HomeSwiper,
-			HomeIcons:HomeIcons
+			HomeIcons:HomeIcons,
+			HomeRecommend:HomeRecommend
 		},
 		data () {
 			return {
 				city:'',
 				swiperList:[],
-				iconList:[]
+				iconList:[],
+				recommendList:[]
 			}
 		},
 
@@ -38,6 +42,7 @@
 					this.city = res.data.city
 					this.swiperList = res.data.swiperList
 					this.iconList = res.data.iconList
+					this.recommendList = res.data.recommendList
 				}
 			}
 		},

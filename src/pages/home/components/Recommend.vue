@@ -4,7 +4,7 @@
 			热销推荐
 		</div>
 		<ul>
-			<li class="item" v-for="item of RecommendList">
+			<li class="item" v-for="item of recommendList">
 				<div class="item-img-wrapper">
 					<img :src="item.imgUrl" alt="" class="item-img">
 				</div>
@@ -20,32 +20,12 @@
 <script>
 export default{
 	name:'HomeRecommend',
+	props:{
+		recommendList:Array
+	},
 	data () {
 		return{
-			RecommendList:[{
-				id:'001',
-				imgUrl:'http://img1.qunarzz.com/sight/p0/1705/eb/eb128df3c858ab92a3.img.jpg_200x200_d6f6c506.jpg',
-				title:'大连圣海洋',
-				desc:'浪漫大连首站'
-			},
-			{
-				id:'002',
-				imgUrl:'http://img1.qunarzz.com/sight/p0/1705/eb/eb128df3c858ab92a3.img.jpg_200x200_d6f6c506.jpg',
-				title:'大连圣海洋',
-				desc:'浪漫大连首站'
-			},
-			{
-				id:'003',
-				imgUrl:'http://img1.qunarzz.com/sight/p0/1705/eb/eb128df3c858ab92a3.img.jpg_200x200_d6f6c506.jpg',
-				title:'大连圣海洋',
-				desc:'浪漫大连首站'
-			},
-			{
-				id:'004',
-				imgUrl:'http://img1.qunarzz.com/sight/p0/1705/eb/eb128df3c858ab92a3.img.jpg_200x200_d6f6c506.jpg',
-				title:'大连圣海洋',
-				desc:'浪漫大连首站'
-			},]
+			
 		}
 	}
 }
