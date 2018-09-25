@@ -7,11 +7,13 @@
 		<span class="iconfont icon-search">&#xe632;</span>
 	城市/景点/游玩主题
 	</div>
-	<div class="header-right">
-		{{this.city}}
-		<span class="iconfont icon-b">&#xe64a;</span>
-		
-	</div>
+	<router-link to="/city">
+		<div class="header-right">
+			{{this.city}}
+			<span class="iconfont icon-b">&#xe64a;</span>
+
+		</div>
+	</router-link>
 </div>
 </template>
 <script>
@@ -57,6 +59,7 @@ export default{
 			float:right
 			text-align:center
 			line-height:0.86rem
+			color:#fff
 			.icon-b{
 				font-size:0.24rem
 			}
