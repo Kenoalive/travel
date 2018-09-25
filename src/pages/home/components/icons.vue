@@ -24,8 +24,7 @@ export default{
 			
 			swiperOption:{
 					autoPlay:false
-			},
-			
+			}
 		}
 	},
 	computed : {

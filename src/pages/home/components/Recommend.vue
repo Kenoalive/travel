@@ -5,6 +5,7 @@
 		</div>
 		<ul>
 			<li class="item" v-for="item of recommendList">
+
 				<div class="item-img-wrapper">
 					<img :src="item.imgUrl" alt="" class="item-img">
 				</div>
