@@ -7,15 +7,7 @@
           <div class="button-wrapper">
             <div class="button">北京</div>
           </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
+          
         </div>
       </div>
       <div class="area">
@@ -26,7 +18,7 @@
           </div>
         </div>
       </div>
-      <div class="area" v-for="(item,key) of cities" :key='key'> 
+      <div class="area" v-for="(item,key) of cities" :key='key' :ref='key'> 
         <!-- 对象也可以循环 用键值来当index-->
         <div class="title">{{key}}</div>
         <!-- 取出item继续循环 内部item是数组-->
@@ -44,10 +36,21 @@ export default {
   name: 'CityList',
   props:{
     hotCities:Array,
-    cities:Object
+    cities:Object,
+    letter:String
   },
   mounted () {
     this.scroll = new BScroll(this.$refs.wrapper)
+  },
+  watch: {  
+    letter () {
+      // this.$refs[this.letter]得到的是数组
+      // this.$refs[this.letter][0]得到的是对象
+
+      const element = this.$refs[this.letter][0]
+      this.scroll.scrollToElement(element)
+
+    }
   }
 }
 </script>
