@@ -17,12 +17,13 @@
 </div>
 </template>
 <script>
-
+import {mapState} from 'vuex'
 export default{
 	name:'homeHeader',
-	props:{
-		city:String
+	computed:{
+		...mapState(['city'])
 	}
+	// mapState将state里的数据映射过来
 	
 }
 </script>

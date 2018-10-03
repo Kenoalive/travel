@@ -5,7 +5,7 @@
     </div>
     <div class="search-content" ref="wrapper" v-show="keyword">
       <ul>
-        <li v-for="item of list" class="search-item">{{item.name}}</li>
+        <li v-for="item of list" class="search-item" @click="changeCity(item.name)">{{item.name}}</li>
         <li  class="search-item" v-show="!list.Length">没有找到匹配数据</li>
       </ul>
     </div>
@@ -26,7 +26,16 @@ export default{
     }
   },
   mounted () {
-    this.scroll = new BScroll(this.$refs.wrapper)
+    this.scroll = new BScroll(this.$refs.wrapper,{
+      click:true
+    })
+  },
+  methods :{
+    changeCity (city) {
+      this.$store.commit('changeCity',city)
+      this.$router.push('/') 
+      // 跳转到首页
+    }
   },
   watch: {
     keyword () {
@@ -63,7 +72,7 @@ export default{
   .search-input
     box-sizing: border-box
     width: 100%
-    height: .52rem
+    height: .56rem
     // margin-bottom:0.2rem
     padding: 0 .1rem
     line-height: .52rem
